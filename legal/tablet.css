@@ -1,0 +1,207 @@
+@media all and (min-width: 600px) and (max-width: 1023px) {
+
+
+/* NAVIGATION SECTION ---------------------------------------------*/
+    #header {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 10;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #header .logo {
+        width: 50px;
+        height: auto;
+        margin: 30px 40px;
+    }
+
+    #header nav ul {
+        list-style: none;
+        overflow: hidden;
+        max-height: 0;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        text-align: center;
+        min-width: 100%;
+        background-color: var(--Red);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* align-items: flex-start; */
+    }
+
+    #header .menu-btn:checked ~ nav ul {
+        min-height: 400px;
+    }
+
+    #header .menu-icon {
+        display: block;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    /* new */
+    #header .menu-icon .nav-icon {
+        display: block;
+        height: 4px;
+        width: 26px;
+        position: relative;
+        transition: background .2s ease-out;
+        background:rgb(255, 255, 255);
+    }
+
+    #header .menu-icon .nav-icon:before {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 26px;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: 10px;
+        background:rgb(255, 255, 255);
+    }
+
+    #header .menu-icon .nav-icon:after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 26px;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: -10px;
+        background:rgb(255, 255, 255);
+    }
+
+    #header .menu-btn {
+        display: none;
+        padding: 10px;
+    }
+
+    #header .menu-btn:checked ~ .menu-icon .nav-icon {
+        background: transparent;
+    }
+
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+        transform: rotate(45deg);
+        top: 0px;
+    }
+
+    #header ul li {
+        list-style-type: none;
+        display: inline;
+        margin: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header nav ul li a {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: 700;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+    }
+
+    #header nav ul li a:hover {
+        text-decoration: none;
+        color:var(--Red);
+        background-color:var(--solidBlack);
+    }
+
+    #header nav ul li a:active {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+/* NAVIGATION SECTION END -----------------------------------------*/
+
+
+/* TERMS AND CONDITIONS SECTION ------------------------------ */
+.terms {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    padding: 30px 30px 0px 30px;
+    margin: 30px auto 0px auto;
+}
+
+.terms p {
+    width: 660px;
+    margin: 10px 0px 10px 0px;
+}
+/* TERMS AND CONDITIONS SECTION END--------------------------- */
+
+/* PRIVACY POLICY SECTION ------------------------------------ */
+.privacy {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    padding: 30px;
+    margin: 0px auto 0px auto;
+}
+
+.privacy p {
+    width: 660px;
+    margin: 10px 0px 10px 0px;
+}
+/* PRIVACY POLICY SECTION END--------------------------------- */
+
+/* COPYRIGHT SECTION ----------------------------------------- */
+.copyright {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+    padding: 0px 30px 0px 30px;
+    margin: 0px auto;
+}
+
+.copyright p {
+    width: 660px;
+    margin: 10px 0px 10px 0px;
+}
+/* COPYRIGHT SECTION END-------------------------------------- */
+
+/* DISCLAIMER SECTION ---------------------------------------- */
+.disclaimer {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+    padding: 30px 30px 30px 30px;
+    margin: 0px auto 30px auto;
+}
+
+.disclaimer p {
+    width: 660px;
+    margin: 10px 0px 10px 0px;
+}
+/* DISCLAIMER SECTION END------------------------------------- */
+
+/* NOTICE SECTION -------------------------------------------- */
+.notice {
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;
+    padding: 30px 30px 30px 30px;
+    min-width: 100%;
+    background-color: var(--solidBlack);
+}
+
+.notice p {
+    width: 660px;
+    margin: 0px auto;
+    color: var(--white);
+}
+
+/* NOTICE SECTION END------------------------------------------ */
+
+
+}

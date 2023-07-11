@@ -1,0 +1,128 @@
+@media all and (min-width: 1024px) {
+
+/* NAVIGATION SECTION -----------------------------*/
+    #header {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 10;
+        width: 100%;
+        padding: 40px 60px;
+    }
+    
+    #header .menu-btn {
+        display: none;
+    }
+
+    #header nav ul {
+        display: flex;
+        gap: 30px;
+    }
+    
+    #header nav ul li {
+        list-style-type: none;
+        display: inline;
+        /* margin: 0px 20px 0px 0px; */
+    }
+    
+    #header nav ul li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 1.6rem;
+    }
+    
+    #header nav ul li a:hover {
+        text-decoration: none;
+        color:var(--Red);
+    }
+    
+    #header nav ul li a:active {
+        text-decoration: none;
+        color:var(--solidBlack);
+    }
+    
+    #header .logo {
+        width: 70px;
+        height: auto;
+        border-radius: 50%;
+    }
+/* NAVIGATION SECTION END--------------------------*/
+
+/* TERMS AND CONDITIONS SECTION ------------------------------ */
+    .terms {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        padding: 30px 30px 0px 30px;
+        margin: 30px auto 0px auto;
+    }
+
+    .terms p {
+        width: 660px;
+        margin: 10px 0px 10px 0px;
+    }
+/* TERMS AND CONDITIONS SECTION END--------------------------- */
+
+/* PRIVACY POLICY SECTION ------------------------------------ */
+    .privacy {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        padding: 30px;
+        margin: 0px auto 0px auto;
+    }
+
+    .privacy p {
+        width: 660px;
+        margin: 10px 0px 10px 0px;
+    }
+/* PRIVACY POLICY SECTION END--------------------------------- */
+
+/* COPYRIGHT SECTION ----------------------------------------- */
+    .copyright {
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+        padding: 0px 30px 0px 30px;
+        margin: 0px auto;
+    }
+
+    .copyright p {
+        width: 660px;
+        margin: 10px 0px 10px 0px;
+    }
+/* COPYRIGHT SECTION END-------------------------------------- */
+
+/* DISCLAIMER SECTION ---------------------------------------- */
+    .disclaimer {
+        grid-row: 5 / 6;
+        grid-column: 1 / -1;
+        padding: 30px 30px 30px 30px;
+        margin: 0px auto 30px auto;
+    }
+
+    .disclaimer p {
+        width: 660px;
+        margin: 10px 0px 10px 0px;
+    }
+/* DISCLAIMER SECTION END------------------------------------- */
+
+/* NOTICE SECTION -------------------------------------------- */
+    .notice {
+        grid-row: 6 / 7;
+        grid-column: 1 / -1;
+        padding: 30px 30px 30px 30px;
+        min-width: 100%;
+        background-color: var(--solidBlack);
+    }
+
+    .notice p {
+        width: 660px;
+        margin: 0px auto;
+        color: var(--white);
+    }
+
+/* NOTICE SECTION END------------------------------------------ */
+
+}

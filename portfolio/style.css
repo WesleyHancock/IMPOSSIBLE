@@ -1,0 +1,36 @@
+:root {
+    --solidBlack: rgba(0, 0, 0, 1);
+    --Black80: rgba(0, 0, 0, 0.4);
+    --lightRed:rgba(255, 124, 124, 1);
+    --Red:rgb(236, 0, 0);
+    --white:rgba(255, 255, 255, 1);
+    --noWhite:rgba(255, 255, 255, 0);
+    --lightGrey:rgba(238, 238, 238, 1);
+    --mediumGrey:rgb(216, 216, 216);
+  }
+
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, minmax(min-content, max-content));
+    position: relative;
+    top: 0px;
+    left: 0px;
+    min-height: 100vh;
+}

@@ -1,0 +1,56 @@
+:root {
+    --solidBlack: rgba(0, 0, 0, 1);
+    --Black80: rgba(0, 0, 0, 0.4);
+    --lightRed:rgba(255, 124, 124, 1);
+    --Red:rgb(236, 0, 0);
+    --white:rgba(255, 255, 255, 1);
+    --noWhite:rgba(255, 255, 255, 0);
+    --lightGrey:rgba(238, 238, 238, 1);
+    --mediumGrey:rgb(216, 216, 216);
+  }
+
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, minmax(min-content, max-content));
+    /* position: relative;
+    top: 0px;
+    left: 0px; */
+    min-height: 100vh;
+}
+
+.button {
+    background-color: var(--solidBlack);
+    color: var(--white);
+    display: block;
+    max-width: 130px;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--Red);
+    box-shadow: rgba(17, 12, 46, 0.3) 0px 5px 10px 0px;
+    transform: scale(1.07);
+}
+
+.button:active {
+    background-color: var(--solidBlack);
+}

@@ -1,0 +1,650 @@
+@media all and (min-width: 600px) and (max-width: 1023px) {
+    
+    /* * {
+        outline: 1px solid red;
+    } */
+
+/* GLOBALS --------------------------------------------------------*/
+
+    /* ANIMATIONS -------------------------------------------------*/
+    @keyframes pulseThree {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+        }
+    
+        60% {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px 30px rgba(255, 236, 150, 0);
+        }
+    
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 236, 150, 0);
+        }
+    }
+
+    @keyframes pulseGrey {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(219, 219, 219, 0.8);
+        }
+    
+        60% {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px 30px rgba(219, 219, 219, 0);
+        }
+    
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(219, 219, 219, 0);
+        }
+    }
+    /* ANIMATIONS END ---------------------------------------------*/
+
+    /* INTRODUCTIONS ----------------------------------------------*/
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80%;
+    }
+    
+    .intro h1 {
+        min-width: 100%;
+        letter-spacing: 3px;
+        font-size: 3.3rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    
+    .intro p {
+        min-width: 100%;
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        max-width: 420px;
+    }
+    /* INTRODUCTIONS END-------------------------------------------*/
+
+    /* CARD LINKS -------------------------------------------------*/
+    .link-box {
+        padding: 10px 15px;
+        border-radius: 30px;
+        background-color: rgb(218, 0, 0);
+        width: max-content;
+        margin: 15px 0px 0px 0px;
+    }
+    
+    .link-box:hover {
+        transform: scale(1.06);
+    }
+
+    .link-box a {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        text-align: center;
+    }
+    /* CARD LINKS END ---------------------------------------------*/
+
+/* GLOBALS END-----------------------------------------------------*/
+
+
+
+
+/* NAVIGATION SECTION ---------------------------------------------*/
+    #header {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 10;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #header .logo {
+        width: 50px;
+        height: auto;
+        margin: 30px 40px;
+    }
+    
+    #header nav ul {
+        list-style: none;
+        overflow: hidden;
+        max-height: 0;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        text-align: center;
+        min-width: 100%;
+        background-color: var(--Red);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* align-items: flex-start; */
+    }
+
+    #header .menu-btn:checked ~ nav ul {
+        min-height: 400px;
+    }
+    
+    #header .menu-icon {
+        display: block;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+        padding: 20px;
+    }
+    
+    /* new */
+    #header .menu-icon .nav-icon {
+        display: block;
+        height: 4px;
+        width: 26px;
+        position: relative;
+        transition: background .2s ease-out;
+        background:rgb(255, 255, 255);
+    }
+    
+    #header .menu-icon .nav-icon:before {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 26px;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: 10px;
+        background:rgb(255, 255, 255);
+    }
+    
+    #header .menu-icon .nav-icon:after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 26px;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: -10px;
+        background:rgb(255, 255, 255);
+    }
+    
+    #header .menu-btn {
+        display: none;
+        padding: 10px;
+    }
+
+    #header .menu-btn:checked ~ .menu-icon .nav-icon {
+        background: transparent;
+    }
+
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+        transform: rotate(45deg);
+        top: 0px;
+    }
+
+    #header ul li {
+        list-style-type: none;
+        display: inline;
+        margin: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #header nav ul li a {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: 700;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+    }
+    
+    #header nav ul li a:hover {
+        text-decoration: none;
+        color:var(--Red);
+        background-color:var(--solidBlack);
+    }
+    
+    #header nav ul li a:active {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+/* NAVIGATION SECTION END -----------------------------------------*/
+
+
+
+
+/* LOGO SECTION ---------------------------------------------------*/
+
+    /*
+    #logo-container .intro h1
+    #logo-container .intro p
+    #logo-container .logoCard-container .l-card img
+    #logo-container .logoCard-container .l-card .card-text .link-box
+    #logo-container .logoCard-container .l-card .card-text .shine
+    */
+
+    #logo-container {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(219, 219, 219);
+        padding: 100px 20px;
+        gap: 90px;
+    }
+    
+    #logo-container .intro p {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    #logo-container .logoCard-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(219, 219, 219);
+        gap: 90px;
+    }
+
+    #logo-container .logoCard-container .l-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        padding: 25px 25px;
+        max-width: 560px;
+        background-color: var(--lightGrey);
+        border-radius: 20px;
+        transition: 0.5s;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 15px 0px;
+    }
+
+    #logo-container .logoCard-container .l-card:hover {
+        animation: pulseThree 0.6s linear;
+        transition: all ease-in-out;
+    }
+
+    #logo-container .logoCard-container .l-card img {
+        max-width: 560px;
+        flex: 1;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #logo-container .logoCard-container .l-card .card-text {
+        width: 100%;
+    }
+    
+    #logo-container .logoCard-container .l-card .card-text h2 {
+        color: var(--solidBlack);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin: 15px 0px;
+        padding-bottom: 6px;
+        border-bottom: 3px solid rgb(0, 0, 0);
+    }
+    
+    #logo-container .logoCard-container .l-card .card-text p {
+        color: var(--solidBlack);
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #logo-container .logoCard-container .l-card .card-text .shine {
+        background-color: rgba(255, 255, 255, 0.06);
+        position: absolute;
+        top: -100px;
+        left: -700px;
+        width: 1700px;
+        height: 360px;
+        transform: rotate(-45deg);
+    }
+
+/* LOGO SECTION END -----------------------------------------------*/
+
+
+
+
+/* SOCIAL MEDIA SECTION ------------------------------------------ */
+
+    /*
+    #socialMedia-container .intro h1
+    #socialMedia-container .intro p
+    #socialMedia-container .socialCard-container .s-card img
+    #socialMedia-container .socialCard-container .s-card .card-text .link-box
+    #socialMedia-container .socialCard-container .s-card .card-text .shine
+    */
+    
+    #socialMedia-container {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        padding: 100px 40px;
+        gap: 90px;
+    }
+
+    #socialMedia-container .intro p {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+        
+    #socialMedia-container .socialCard-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(219, 219, 219, 0);
+        gap: 90px;
+    }
+
+    #socialMedia-container .socialCard-container .s-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        max-width: 560px;
+        height: max-content;
+        padding: 25px 25px;
+        background-color: var(--white);
+        border-radius: 20px;
+        transition: 0.5s;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.36) 0px 5px 15px 0px;
+    }
+
+    #socialMedia-container .socialCard-container .s-card:hover {
+        animation: pulseGrey 0.6s linear;
+        transition: all ease-in-out;
+    }
+
+    #socialMedia-container .socialCard-container .s-card img {
+        max-width: 560px;
+        flex: 1;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #socialMedia-container .socialCard-container .s-card .card-text {
+        width: 100%;
+    }
+    
+    #socialMedia-container .socialCard-container .s-card .card-text h2 {
+        color: var(--solidBlack);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin: 15px 0px;
+        padding-bottom: 6px;
+        border-bottom: 3px solid rgb(0, 0, 0);
+    }
+    
+    #socialMedia-container .socialCard-container .s-card .card-text p {
+        color: var(--solidBlack);
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #socialMedia-container .socialCard-container .s-card .card-text .shine {
+        background-color: rgba(255, 255, 255, 0.06);
+        position: absolute;
+        top: -100px;
+        left: -700px;
+        width: 1700px;
+        height: 360px;
+        transform: rotate(-45deg);
+    }
+/* SOCIAL MEDIA SECTION END -------------------------------------- */
+
+
+
+
+/* POSTER SECTION ------------------------------------------------ */
+
+    /*
+    #poster-container .intro h1
+    #poster-container .intro p
+    #poster-container .posterCard-container .p-card.one -> .seven img
+    #poster-container .posterCard-container .p-card.one -> .seven .card-text .link-box
+    #poster-container .posterCard-container .p-card.one -> .seven .card-text .shine
+    */
+
+    #poster-container {
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: max-content;
+        background-color: rgb(255, 255, 255);
+        padding: 100px 40px;
+        background-color: rgb(219, 219, 219);
+        gap: 90px;
+    }
+
+    #poster-container .intro p {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    #poster-container .posterCard-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(219, 219, 219, 0);
+        gap: 90px;
+    }
+
+    #poster-container .posterCard-container .p-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        padding: 25px 25px;
+        background-color: var(--white);
+        border-radius: 20px;
+        transition: 0.5s;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.36) 0px 5px 15px 0px;
+    }
+
+    #poster-container .posterCard-container .p-card:hover {
+        animation: pulseThree 0.6s linear;
+        transition: all ease-in-out;
+    }
+
+    #poster-container .posterCard-container .p-card.one, .p-card.five, .p-card.six, .p-card.seven {
+        max-width: 500px;
+    }
+
+    #poster-container .posterCard-container .p-card.two, .p-card.three, .p-card.four {
+        max-width: 660px;
+    }
+
+    #poster-container .posterCard-container .p-card.one img, .p-card.five img, .p-card.six img, .p-card.seven img {
+        flex: 1;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #poster-container .posterCard-container .p-card.two img, .p-card.three img, .p-card.four img {
+        flex: 1;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #poster-container .posterCard-container .p-card .card-text {
+        width: 100%;
+    }
+
+    #poster-container .posterCard-container .p-card .card-text h2 {
+        color: var(--solidBlack);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin: 15px 0px;
+        padding-bottom: 6px;
+        border-bottom: 3px solid rgb(0, 0, 0);
+    }
+    
+    #poster-container .posterCard-container .p-card .card-text p {
+        color: var(--solidBlack);
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #poster-container .posterCard-container  .p-card .card-text .shine {
+        background-color: rgba(255, 255, 255, 0.06);
+        position: absolute;
+        top: -150px;
+        left: -770px;
+        width: 1900px;
+        height: 360px;
+        transform: rotate(-45deg);
+    }
+/* POSTER SECTION END -------------------------------------------- */
+
+
+
+
+/* FOOTER SECTION -------------------------------------------------*/
+
+    /*
+    #footer
+    #footer .legal
+    #footer .notice
+    #footer .legal .termsAndConditions
+    #footer .legal .privacyPolicy
+    #footer .legal .copyright
+    #footer .legal .disclaimer
+    #footer .legal .contact
+    */
+
+    #footer {
+        grid-row: 5 / 6;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    #footer .legal {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 40px 40px 0px 40px;
+        gap: 40px;
+    }
+
+    #footer .legal .termsAndConditions, .privacyPolicy, .copyright, .disclaimer, .contact {
+        width: max-content;
+    }
+
+    #footer .legal .termsAndConditions ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 33px;
+    }
+
+    #footer .legal .privacyPolicy ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 30px;
+    }
+
+    #footer .legal .copyright ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 30px;
+    }
+
+    #footer .legal h2 {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: rgba(255, 255, 255, 1);
+        padding: 5px 0px;
+        width: 100%;
+    }
+
+    #footer .legal ul {
+        list-style-type: none;
+        padding: 0px 0px;
+    }
+
+    #footer .legal ul li {
+        margin: 10px 0px;
+    }
+
+    #footer .legal ul li a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #footer .legal li a:hover {
+        color: rgba(236, 0, 0, 1);
+    }
+
+    #footer .notice {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        padding: 0px 20px 20px 20px;
+        border-top: 1px solid rgb(219, 219, 219);
+        padding: 20px 40px 20px 40px;
+    }
+
+/* FOOTER SECTION END ---------------------------------------------*/
+
+}
